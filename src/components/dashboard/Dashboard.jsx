@@ -7,19 +7,16 @@ import WorkWithPlatformsWidget from './WorkWithPlatformsWidget';
 
 const Dashboard = () => {
     return (
-        <div className="pb-8">
+        <div className="pb-4 sm:pb-8">
             <DashboardHeader />
             <TopStatsRow />
 
             <UserSalesTable />
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-6">
-                <div className="lg:col-span-2">
-                    <PlatformValueWidget />
-                </div>
-                <div className="lg:col-span-3">
-                    <WorkWithPlatformsWidget />
-                </div>
+            {/* Bottom Widgets - Uniform grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-4 sm:mt-6">
+                <PlatformValueWidget />
+                <WorkWithPlatformsWidget />
             </div>
         </div>
     );
